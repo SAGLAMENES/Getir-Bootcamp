@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol SearchProtocols: class {
+    func searchButtonTapped()
+    func searchBarTextDidChange()
+}

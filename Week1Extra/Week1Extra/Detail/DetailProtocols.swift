@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol DetailViewModelProtocol {
+    var delegate: DetailViewModelDelegate? { get set }
+    func load()
+    func selectedWord()
+}

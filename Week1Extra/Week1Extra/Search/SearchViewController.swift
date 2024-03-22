@@ -6,3 +6,20 @@
 //
 
 import Foundation
+import UIKit
+
+class SearchViewController: UIViewController{
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    @IBAction func didSearchButtonTapped(_ sender: Any) {
+    }
+}
