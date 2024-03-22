@@ -128,7 +128,7 @@ func largestPrime(){
  A polindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two 3-digit numbers.
  */
  
-func polindromicNum(){
+/*func polindromicNum(){
     var number = 0
     var string1 = ""
     for i in 100...999{
@@ -144,7 +144,7 @@ func polindromicNum(){
     print(number)
 }
 //polindromicNum()
-
+*/
 //MARK: - 6. Soru
 /*
  2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
@@ -152,23 +152,45 @@ func polindromicNum(){
  */
  
 func evenlyDivisible(){
-    var number = 1
-    for i in 1...20{
-        number*=i
+    var num = 1
+    for i in 11...20{
+        num*=i
     }
-    for i in 20...number{
-        var isDivisible = true
-        for j in 1...20{
-            if i % j != 0{
-                isDivisible = false
-                break
-            }
-        }
-        if isDivisible{
-            print(i)
-            break
+    print(num)
+}
+evenlyDivisible()
+
+// MARK: - 7. Soru
+/*
+ Fonksiyonun parametre oalrak verilen sayıya göre + - karakterlerini ekrana yazdıran bir fonksiyon yazınız
+ */
+
+func plusMinus(size: Int){
+    for i in 0..<size{
+        if i < size/2{
+            print("+")
+        }else{
+            print("-")
         }
     }
 }
-//evenlyDivisible()
 
+// Mark: - 8. Soru
+/*
+ Fonksiyona parametre olarak verilen sayıyı en büyük yapacak şekilde 5 sayısını ilgili basamağa koyunuz. Örneğin; parametre 0 için çıktı 50 olmalıdır. Parametre 28 için 528, parametre 920 için 9520 olmalıdır
+*/
+
+func makeMax(number: Int)-> Int{
+    let numStr = String(number)
+
+     var result = ""
+        for (index, char) in numStr.enumerated() {
+            if char < "5" {
+                result = numStr.prefix(index) + "5" + numStr.suffix(numStr.count - index)
+                break
+            }
+        }
+    return Int(result)!
+ }
+
+makeMax(number: 990)
