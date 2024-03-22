@@ -7,7 +7,12 @@
 
 import Foundation
 
-protocol SearchProtocols: class {
+protocol SearchViewModelProtocols: AnyObject {
+    var delegate: SearchViewModelDelegate? { get set }
     func searchButtonTapped()
     func searchBarTextDidChange()
+}
+
+protocol SearchViewModelDelegate{
+    func updateView()
 }

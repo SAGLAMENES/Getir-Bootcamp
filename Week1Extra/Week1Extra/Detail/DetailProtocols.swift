@@ -12,3 +12,6 @@ protocol DetailViewModelProtocol {
     func load()
     func selectedWord()
 }
+protocol DetailViewModelDelegate{
+    func updateView()
+}
